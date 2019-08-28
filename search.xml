@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>十年规划</title>
+      <link href="/2019/08/29/%E8%AE%A1%E5%88%92/%E5%8D%81%E5%B9%B4%E8%A7%84%E5%88%92/"/>
+      <url>/2019/08/29/%E8%AE%A1%E5%88%92/%E5%8D%81%E5%B9%B4%E8%A7%84%E5%88%92/</url>
+      
+        <content type="html"><![CDATA[<h3 id="十年规划"><a href="#十年规划" class="headerlink" title="十年规划"></a>十年规划</h3><p>  今天迎来了30岁的生日，俗话说三十而立。虽然性格、成熟度离这个还很远，但是总算在今年找到了人生事业奋斗的方向，做一名底层的架构师、系统设计师、CTO。<br>  30岁，同时也庆幸有一个这么好的家庭，爱我的老婆，一直以来无时无刻都照顾着我的妈妈，还有那在媳妇胎中的孩子。特别感谢今天妈妈做的好吃的，以及媳妇定的蛋糕。还有哥哥、老丈人、姑姑送来的祝福，这餐饭吃的真的很开心。<br>  30岁，已过半甲，无论过去的辉煌与低谷、开心与不开心都已经过去。很庆幸在此刻仍然没有忘记自己的初衷：找到喜欢的方向，并持续努力成为专家、CTO、并希望以后拥有自己的一家公司。在此，也给自己接下来的十年制定自己的规划：1、2年内成为mde。2、5年内成为SE。3、10年内成为一个百人项目的CTO。<br>  文末，上传一张今天的照片，以此纪念此时的自己，也为自己的未来加油！</p><p><img src=".%5Cmyself.png" alt="1567007145608"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> plan </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> plan </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于软件质量总结与思考</title>
       <link href="/2019/08/26/%E6%80%BB%E7%BB%93/%E5%85%B3%E4%BA%8E%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E7%9A%84%E6%80%9D%E8%80%83/"/>
       <url>/2019/08/26/%E6%80%BB%E7%BB%93/%E5%85%B3%E4%BA%8E%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E7%9A%84%E6%80%9D%E8%80%83/</url>
@@ -79,31 +104,6 @@
     
     
     <entry>
-      <title>常见静态检查问题</title>
-      <link href="/2019/07/15/%E6%80%BB%E7%BB%93/%E9%9D%99%E6%80%81%E6%A3%80%E6%9F%A5/"/>
-      <url>/2019/07/15/%E6%80%BB%E7%BB%93/%E9%9D%99%E6%80%81%E6%A3%80%E6%9F%A5/</url>
-      
-        <content type="html"><![CDATA[<h4 id="常见静态检查问题"><a href="#常见静态检查问题" class="headerlink" title="常见静态检查问题"></a>常见静态检查问题</h4><p>本文介绍项目过程中常遇到的静态检查问题：</p><p>1、指针未赋值<br>2、多余的赋值。<br>3、指针加上运算未对时出现截断现象（原因是int * int  必须为long ，故因为int * long）<br>4、指针不使用时，需要赋值为NULL<br>5、文件打开时如果使用create命令，需要制定create后文件的访问权限设置。<br>6、外部输入的文件路径，需要realpath<br>7、宏定位中，输入的每一个参数都需要使用括号括住。<br>8、文件使用完后，未对文件进行关闭操作。<br>9、外部输入的命令，需要做校验操作。<br>10、将指针转换为数值时不能使用（unsing int） 应该是用（uint_ptr)。 该类型是根据CPU位宽确定。<br>11、位运算操作时，只能对unsigned类型进行操作。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> conclusion </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> project </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2019年度计划</title>
       <link href="/2019/07/15/%E8%AE%A1%E5%88%92/2019%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/"/>
       <url>/2019/07/15/%E8%AE%A1%E5%88%92/2019%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/</url>
@@ -121,6 +121,31 @@
         <tags>
             
             <tag> year-plan </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>常见静态检查问题</title>
+      <link href="/2019/07/15/%E6%80%BB%E7%BB%93/%E9%9D%99%E6%80%81%E6%A3%80%E6%9F%A5/"/>
+      <url>/2019/07/15/%E6%80%BB%E7%BB%93/%E9%9D%99%E6%80%81%E6%A3%80%E6%9F%A5/</url>
+      
+        <content type="html"><![CDATA[<h4 id="常见静态检查问题"><a href="#常见静态检查问题" class="headerlink" title="常见静态检查问题"></a>常见静态检查问题</h4><p>本文介绍项目过程中常遇到的静态检查问题：</p><p>1、指针未赋值<br>2、多余的赋值。<br>3、指针加上运算未对时出现截断现象（原因是int * int  必须为long ，故因为int * long）<br>4、指针不使用时，需要赋值为NULL<br>5、文件打开时如果使用create命令，需要制定create后文件的访问权限设置。<br>6、外部输入的文件路径，需要realpath<br>7、宏定位中，输入的每一个参数都需要使用括号括住。<br>8、文件使用完后，未对文件进行关闭操作。<br>9、外部输入的命令，需要做校验操作。<br>10、将指针转换为数值时不能使用（unsing int） 应该是用（uint_ptr)。 该类型是根据CPU位宽确定。<br>11、位运算操作时，只能对unsigned类型进行操作。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> conclusion </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> project </tag>
             
         </tags>
       

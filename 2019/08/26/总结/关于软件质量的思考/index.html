@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="jacsons">
 <meta property="og:description" content="背景​        这段时间项目进入了迭代的尾期，主要开始处理软件质量的问题，从codestyle修改到静态检查的清理、再到安全代码检视，以及后面还有得cmetric等等。 本文是对这一阶段的工作过程中发现的codestyle、安全代码检视等各种问题做总结，另外也对项目中存在的问题做一点点思考。 常见codestyle问题​        codestyle主要是违反公司的编码规范的问题，本节是">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-28T15:52:34.398Z">
+<meta property="og:updated_time" content="2019-09-04T15:25:15.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于软件质量总结与思考">
 <meta name="twitter:description" content="背景​        这段时间项目进入了迭代的尾期，主要开始处理软件质量的问题，从codestyle修改到静态检查的清理、再到安全代码检视，以及后面还有得cmetric等等。 本文是对这一阶段的工作过程中发现的codestyle、安全代码检视等各种问题做总结，另外也对项目中存在的问题做一点点思考。 常见codestyle问题​        codestyle主要是违反公司的编码规范的问题，本节是">
@@ -442,6 +442,11 @@
 <p>8、数据进行运算时，不考虑溢出问题。</p>
 <p>9、if语句条件判断不完全。</p>
 <p>10、返回值类型不统一。</p>
+</li>
+<li><p>安全考试中常见的问题<br>1、赋值给memset，malloc、等传递的为负数或者运算后溢出的数值。</p>
+<p>2、memset 可能导致命令注入。</p>
+<p>3、sccanf 返回值一定要判断个数。</p>
+<p>4、存储密码类型的变量，使用完后要清零。</p>
 </li>
 </ul>
 <h5 id="常见的代码问题"><a href="#常见的代码问题" class="headerlink" title="常见的代码问题"></a>常见的代码问题</h5><p>​    在检视过程中发现项目中存在几个问题：</p>

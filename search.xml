@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[单例模式]]></title>
     <url>%2F2019%2F09%2F19%2F%E9%98%85%E8%AF%BB%2FCdesign%2FSingleInstance%2F</url>
-    <content type="text"><![CDATA[单例模式​ 单例模式应该是最简单的模式了，但是使用面是非常非常的广泛的。如：各种工具集，驱动中对应的每种设备接口集其实也应该设计为单例模式。 C语言实现 singleInstance.h 123456789101112#ifndef __SINGLE_INSTANCE_H__#define __SINGLE_INSTANCE_H__#include &lt;stdlib.h&gt;#include &lt;stdio.h&gt;typedef struct object &#123; void *private; int (*operators)(const struct object *that);&#125; object_t;object_t *GET_INSTANCE(); #endif singleInstance.c 123456789101112131415161718192021222324252627#include &lt;stdio.h&gt;#include "singleInstance.h"object_t* g_object = NULL;static int operators(const struct object *that)&#123;int *private = (int *)that-&gt;private;printf("Hello world single instacne, private date = %d!\n", *private);&#125;object_t *GET_INSTANCE()&#123;if (g_object == NULL) &#123;g_object = (object_t*)malloc(sizeof(object_t));if (g_object == NULL) &#123;return NULL;&#125;int date = 1;g_object-&gt;private = &amp;date;g_object-&gt;operators = operators;&#125;return g_object;&#125; main.h1234567891011121314151617#include &lt;stdio.h&gt;#include "singleInstance.h"int main()&#123; object_t *object = GET_INSTANCE(); if (object == NULL) &#123; printf("object is null! \n"); return -1; &#125; object-&gt;operators(object); object-&gt;operators(object); return 0;&#125; 运行结果执行gcc命令 gcc main.c singleInstance.c -o singleInstance运行结果： Hello world single instacne, private date = 1! Hello world single instacne, private date = 1!]]></content>
+    <content type="text"><![CDATA[单例模式​ 单例模式应该是最简单的模式了，但是使用面是非常非常的广泛的。如：各种工具集，驱动中对应的每种设备接口集其实也应该设计为单例模式。 C语言实现 singleInstance.h 123456789101112#ifndef __SINGLE_INSTANCE_H__#define __SINGLE_INSTANCE_H__#include &lt;stdlib.h&gt;#include &lt;stdio.h&gt;typedef struct object &#123; void *private; int (*operators)(const struct object *that);&#125; object_t;object_t *GET_INSTANCE(); #endif singleInstance.c 123456789101112131415161718192021222324252627#include &lt;stdio.h&gt;#include "singleInstance.h"object_t* g_object = NULL;static int operators(const struct object *that)&#123;int *private = (int *)that-&gt;private;printf("Hello world single instacne, private date = %d!\n", *private);&#125;object_t *GET_INSTANCE()&#123;if (g_object == NULL) &#123;g_object = (object_t*)malloc(sizeof(object_t));if (g_object == NULL) &#123;return NULL;&#125;int date = 1;g_object-&gt;private = &amp;date;g_object-&gt;operators = operators;&#125;return g_object;&#125; main.h 1234567891011121314151617#include &lt;stdio.h&gt;#include "singleInstance.h"int main()&#123; object_t *object = GET_INSTANCE(); if (object == NULL) &#123; printf("object is null! \n"); return -1; &#125; object-&gt;operators(object); object-&gt;operators(object); return 0;&#125; 运行结果执行gcc命令 gcc main.c singleInstance.c -o singleInstance运行结果： Hello world single instacne, private date = 1! Hello world single instacne, private date = 1!]]></content>
       <categories>
         <category>C</category>
         <category>design</category>
@@ -69,6 +69,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[2019年度计划]]></title>
+    <url>%2F2019%2F07%2F15%2F%E8%AE%A1%E5%88%92%2F2019%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92%2F</url>
+    <content type="text"><![CDATA[年度计划阅读计划 目标 一个月一本书，今年阅读完6本书并写下总结，阅读书的总体目标是linux系统，其中以驱动为切入口去了解linux中的原理。 清单 序列 书名 完成时间 状态 1 深入Linux设备驱动程序内核机制.陈学松 7月10日 100% 2 Linux C：一站式编程 7月15日 100% 3 Linux设备驱动开发详解 8月1日 100% 4 redis设计与实现 10月1日 60% 5 项目计划 目标完成ARM视频学习并编写总结，并且能够搭建一个框架含有：底层驱动、通信系统、设备管理软件、进程监控的系统设计与整理框架的搭建。 序列 任务 完成时间 状态 1 ARM视频第一期 8月1日 30% 2 ARM视频第二期 10月1日 未开始 3 ARM视频第三期 12月1日 未开始 4 整体系统的框架设计并输出文档 12月1日 未开始 5 完成框架啊代码编写 12月30日 未开始 其他目标 运动每周日一次游泳。 技能阅读每周一遍技术文档]]></content>
+      <categories>
+        <category>plan</category>
+      </categories>
+      <tags>
+        <tag>year-plan</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[常见静态检查问题]]></title>
     <url>%2F2019%2F07%2F15%2F%E6%80%BB%E7%BB%93%2F%E9%9D%99%E6%80%81%E6%A3%80%E6%9F%A5%2F</url>
     <content type="text"><![CDATA[常见静态检查问题本文介绍项目过程中常遇到的静态检查问题： 1、指针未赋值2、多余的赋值。3、指针加上运算未对时出现截断现象（原因是int * int 必须为long ，故因为int * long）4、指针不使用时，需要赋值为NULL5、文件打开时如果使用create命令，需要制定create后文件的访问权限设置。6、外部输入的文件路径，需要realpath7、宏定位中，输入的每一个参数都需要使用括号括住。8、文件使用完后，未对文件进行关闭操作。9、外部输入的命令，需要做校验操作。10、将指针转换为数值时不能使用（unsing int） 应该是用（uint_ptr)。 该类型是根据CPU位宽确定。11、位运算操作时，只能对unsigned类型进行操作。]]></content>
@@ -88,17 +99,6 @@
       </categories>
       <tags>
         <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[2019年度计划]]></title>
-    <url>%2F2019%2F07%2F15%2F%E8%AE%A1%E5%88%92%2F2019%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92%2F</url>
-    <content type="text"><![CDATA[年度计划阅读计划 目标 一个月一本书，今年阅读完6本书并写下总结，阅读书的总体目标是linux系统，其中以驱动为切入口去了解linux中的原理。 清单 序列 书名 完成时间 状态 1 深入Linux设备驱动程序内核机制.陈学松 7月10日 100% 2 Linux C：一站式编程 7月15日 100% 3 Linux设备驱动开发详解 8月1日 100% 4 redis设计与实现 10月1日 60% 5 项目计划 目标完成ARM视频学习并编写总结，并且能够搭建一个框架含有：底层驱动、通信系统、设备管理软件、进程监控的系统设计与整理框架的搭建。 序列 任务 完成时间 状态 1 ARM视频第一期 8月1日 30% 2 ARM视频第二期 10月1日 未开始 3 ARM视频第三期 12月1日 未开始 4 整体系统的框架设计并输出文档 12月1日 未开始 5 完成框架啊代码编写 12月30日 未开始 其他目标 运动每周日一次游泳。 技能阅读每周一遍技术文档]]></content>
-      <categories>
-        <category>plan</category>
-      </categories>
-      <tags>
-        <tag>year-plan</tag>
       </tags>
   </entry>
   <entry>

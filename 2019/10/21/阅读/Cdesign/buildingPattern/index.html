@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="read,">
 
 
 
@@ -94,13 +94,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="jacsons">
-<meta property="og:url" content="http://www.jacsons.com/archives/2018/index.html">
+<meta name="description" content="建筑者模式​         建筑模式与上面工厂模式一样，都是从new出对象的角度来设计，但是与工厂模式不同的是：工厂关注的是一类（簇），而建筑模式关注的是组成的细节。 类图 C语言实现优点、适应范围小结">
+<meta name="keywords" content="read">
+<meta property="og:type" content="article">
+<meta property="og:title" content="建筑者模式">
+<meta property="og:url" content="http://www.jacsons.com/2019/10/21/阅读/Cdesign/buildingPattern/index.html">
 <meta property="og:site_name" content="jacsons">
+<meta property="og:description" content="建筑者模式​         建筑模式与上面工厂模式一样，都是从new出对象的角度来设计，但是与工厂模式不同的是：工厂关注的是一类（簇），而建筑模式关注的是组成的细节。 类图 C语言实现优点、适应范围小结">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.jacsons.com/images/buildingPattern.png">
+<meta property="og:updated_time" content="2019-10-27T02:53:23.147Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jacsons">
+<meta name="twitter:title" content="建筑者模式">
+<meta name="twitter:description" content="建筑者模式​         建筑模式与上面工厂模式一样，都是从new出对象的角度来设计，但是与工厂模式不同的是：工厂关注的是一类（簇），而建筑模式关注的是组成的细节。 类图 C语言实现优点、适应范围小结">
+<meta name="twitter:image" content="http://www.jacsons.com/images/buildingPattern.png">
 
 
 
@@ -129,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://www.jacsons.com/archives/2018/">
+  <link rel="canonical" href="http://www.jacsons.com/2019/10/21/阅读/Cdesign/buildingPattern/">
 
 
 
 
 
-  <title>归档 | jacsons</title>
+  <title>建筑者模式 | jacsons</title>
   
 
 
@@ -160,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 	<a href="https://www.jacsons.cn" class="github-corner" aria-label="View source on GitHub">
 		<svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
@@ -298,107 +305,229 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 15 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.jacsons.com/2019/10/21/阅读/Cdesign/buildingPattern/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jacsons">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/default_avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jacsons">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/09/16/总结/通用软件两年半感想/" itemprop="url">
-              
-                <span itemprop="name">通用软件两年半感想之领导篇</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">建筑者模式</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-09-16T10:22:07Z" content="2018-09-16">
-          09-16
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-21T05:08:08+08:00">
+                2019-10-20
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/design/" itemprop="url" rel="index">
+                    <span itemprop="name">design</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/10/21/阅读/Cdesign/buildingPattern/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/10/21/阅读/Cdesign/buildingPattern/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/09/09/总结/通用软件两年半感想之项目篇/" itemprop="url">
-              
-                <span itemprop="name">通用软件两年半感想之项目篇</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-09-08T23:22:07Z" content="2018-09-08">
-          09-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <h2 id="建筑者模式"><a href="#建筑者模式" class="headerlink" title="建筑者模式"></a>建筑者模式</h2><p>​         建筑模式与上面工厂模式一样，都是从new出对象的角度来设计，但是与工厂模式不同的是：工厂关注的是一类（簇），而建筑模式关注的是组成的细节。</p>
+<h3 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h3><p><img src="/images/buildingPattern.png" alt="buildingPattern"></p>
+<h3 id="C语言实现"><a href="#C语言实现" class="headerlink" title="C语言实现"></a>C语言实现</h3><h3 id="优点、适应范围"><a href="#优点、适应范围" class="headerlink" title="优点、适应范围"></a>优点、适应范围</h3><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3>
+      
     </div>
+    
+    
+    
+
+	<div>
+		  
+			
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/10/21/阅读/Cdesign/buildingPattern/">建筑者模式</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 jacsons 的个人博客">jacsons</a></p>
+  <p><span>发布时间:</span>2019年10月20日 - 21:10</p>
+  <p><span>最后更新:</span>2019年10月27日 - 10:10</p>
+  <p><span>原始链接:</span><a href="/2019/10/21/阅读/Cdesign/buildingPattern/" title="建筑者模式">http://www.jacsons.com/2019/10/21/阅读/Cdesign/buildingPattern/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.jacsons.com/2019/10/21/阅读/Cdesign/buildingPattern/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+		  
+	</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/read/" rel="tag"><i class="fa fa-tag"></i> read</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/07/阅读/Cdesign/AbstractorFactory/" rel="next" title="抽象工厂">
+                <i class="fa fa-chevron-left"></i> 抽象工厂
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/28/阅读/Cdesign/ObjectInheritMuti/" rel="prev" title="C语言的封装、继承、多态">
+                C语言的封装、继承、多态 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -406,6 +535,13 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2019/10/21/阅读/Cdesign/buildingPattern/" data-title="建筑者模式" data-url="http://www.jacsons.com/2019/10/21/阅读/Cdesign/buildingPattern/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -426,8 +562,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/default_avatar.png" alt="jacsons">
           <p class="site-author-name" itemprop="name">jacsons</p>
@@ -511,6 +656,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#建筑者模式"><span class="nav-number">1.</span> <span class="nav-text">建筑者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类图"><span class="nav-number">1.1.</span> <span class="nav-text">类图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C语言实现"><span class="nav-number">1.2.</span> <span class="nav-text">C语言实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优点、适应范围"><span class="nav-number">1.3.</span> <span class="nav-text">优点、适应范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">1.4.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -637,11 +798,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   

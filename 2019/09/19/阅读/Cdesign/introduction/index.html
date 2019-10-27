@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="jacsons">
 <meta property="og:description" content="设计模式​        距离上一次阅读设计模式已经具体很多年了，经过几年从事java的工作，懵懵懂懂感觉到各种架构的巧妙，也体会到了其中蕴含的各种设计模式以及其带来的种种好处。如今转行从事C语言开发，虽然印象中传统的C语言程序都是规模很小的程序，使用不到各种设计模式，从百度到的C语言版本的设计模式结果就可以看到，更别说成熟架构。但如今，C语言的程序已经规模不断在增大，不再试几千行代码规模。现已经">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-06T14:33:41.445Z">
+<meta property="og:updated_time" content="2019-10-27T02:55:04.262Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式">
 <meta name="twitter:description" content="设计模式​        距离上一次阅读设计模式已经具体很多年了，经过几年从事java的工作，懵懵懂懂感觉到各种架构的巧妙，也体会到了其中蕴含的各种设计模式以及其带来的种种好处。如今转行从事C语言开发，虽然印象中传统的C语言程序都是规模很小的程序，使用不到各种设计模式，从百度到的C语言版本的设计模式结果就可以看到，更别说成熟架构。但如今，C语言的程序已经规模不断在增大，不再试几千行代码规模。现已经">
@@ -429,6 +429,9 @@
       
         <h4 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h4><p>​        距离上一次阅读设计模式已经具体很多年了，经过几年从事java的工作，懵懵懂懂感觉到各种架构的巧妙，也体会到了其中蕴含的各种设计模式以及其带来的种种好处。如今转行从事C语言开发，虽然印象中传统的C语言程序都是规模很小的程序，使用不到各种设计模式，从百度到的C语言版本的设计模式结果就可以看到，更别说成熟架构。但如今，C语言的程序已经规模不断在增大，不再试几千行代码规模。现已经发展到万，十万级的代码规模了，如不引入设计模式，后期的功能的修改与维护将会疲惫不堪。故又重拿起设计模式，重新使用C语言来实现。</p>
 <h5 id="设计模式的汇总"><a href="#设计模式的汇总" class="headerlink" title="设计模式的汇总"></a>设计模式的汇总</h5><ul>
+<li><p>C的封装、继承、多态</p>
+<p>封装、继承、多态是面向对象的三个基本特性，语言本身对这种特性具有要求与天然的支持。但是对于C语言这种面向过程的C语言来讲，却没有这种要求与限制。那么如何使用C语言来实现这是三种特性？以及能够给软件代码哪些好处呢？</p>
+</li>
 <li><p>单例模式</p>
 <p>单例模式应该是最简单的模式了，单是使用面是非常非常的广泛的。如：各种工具集，驱动中对应的每种设备接口集其实也应该设计为单例模式。</p>
 </li>
@@ -436,6 +439,9 @@
 <p>简单工厂是根据使用统一的接口，在保证主流程结构不变的情况下，根据传入的参数来改变获取不同的执行行数从而获取不同的结果。</p>
 </li>
 <li><p>抽象工厂<br>简单工厂类似于单一工厂，生产的产品为同一类型的产品，抽象工厂更加类似于组装厂。例如电脑，其中有内存和cpu。cpu可以有多重型号（一个简单工厂生成），内存也有多种型号（另一个简单工厂），具体内容见抽象工厂章节。</p>
+</li>
+<li><p>建筑模式</p>
+<p>建筑模式与上面工厂模式一样，都是从new出对象的角度来设计，但是与工厂模式不同的是：工厂关注的是一类（簇），而建筑模式关注的是部件的组成。</p>
 </li>
 </ul>
 
@@ -457,7 +463,7 @@
   <p><span>本文标题:</span><a href="/2019/09/19/阅读/Cdesign/introduction/">设计模式</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 jacsons 的个人博客">jacsons</a></p>
   <p><span>发布时间:</span>2019年09月18日 - 23:09</p>
-  <p><span>最后更新:</span>2019年10月06日 - 22:10</p>
+  <p><span>最后更新:</span>2019年10月27日 - 10:10</p>
   <p><span>原始链接:</span><a href="/2019/09/19/阅读/Cdesign/introduction/" title="设计模式">http://www.jacsons.com/2019/09/19/阅读/Cdesign/introduction/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.jacsons.com/2019/09/19/阅读/Cdesign/introduction/" aria-label="复制成功！"></i></span>
   </p>
@@ -592,7 +598,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="project,">
+  <meta name="keywords" content="thinking,">
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="常见静态检查问题本文介绍项目过程中常遇到的静态检查问题： 1、指针未赋值2、多余的赋值。3、指针加上运算未对时出现截断现象（原因是int * int  必须为long ，故因为int * long）4、指针不使用时，需要赋值为NULL5、文件打开时如果使用create命令，需要制定create后文件的访问权限设置。6、外部输入的文件路径，需要realpath7、宏定位中，输入的每一个参数都需要使用">
-<meta name="keywords" content="project">
+<meta name="description" content="背景​        这段时间项目进入了迭代的尾期，主要开始处理软件质量的问题，从codestyle修改到静态检查的清理、再到安全代码检视，以及后面还有得cmetric等等。 本文是对这一阶段的工作过程中发现的codestyle、安全代码检视等各种问题做总结，另外也对项目中存在的问题做一点点思考。 常见codestyle问题​        codestyle主要是违反公司的编码规范的问题，本节是">
+<meta name="keywords" content="thinking">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常见静态检查问题">
-<meta property="og:url" content="http://www.jacsons.com/2019/07/15/总结/静态检查/index.html">
+<meta property="og:title" content="关于软件质量总结与思考">
+<meta property="og:url" content="http://www.jacsons.com/2019/08/26/总结/思考/关于软件质量的思考/index.html">
 <meta property="og:site_name" content="jacsons">
-<meta property="og:description" content="常见静态检查问题本文介绍项目过程中常遇到的静态检查问题： 1、指针未赋值2、多余的赋值。3、指针加上运算未对时出现截断现象（原因是int * int  必须为long ，故因为int * long）4、指针不使用时，需要赋值为NULL5、文件打开时如果使用create命令，需要制定create后文件的访问权限设置。6、外部输入的文件路径，需要realpath7、宏定位中，输入的每一个参数都需要使用">
+<meta property="og:description" content="背景​        这段时间项目进入了迭代的尾期，主要开始处理软件质量的问题，从codestyle修改到静态检查的清理、再到安全代码检视，以及后面还有得cmetric等等。 本文是对这一阶段的工作过程中发现的codestyle、安全代码检视等各种问题做总结，另外也对项目中存在的问题做一点点思考。 常见codestyle问题​        codestyle主要是违反公司的编码规范的问题，本节是">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-02T14:28:04.630Z">
+<meta property="og:updated_time" content="2019-09-04T15:25:15.820Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常见静态检查问题">
-<meta name="twitter:description" content="常见静态检查问题本文介绍项目过程中常遇到的静态检查问题： 1、指针未赋值2、多余的赋值。3、指针加上运算未对时出现截断现象（原因是int * int  必须为long ，故因为int * long）4、指针不使用时，需要赋值为NULL5、文件打开时如果使用create命令，需要制定create后文件的访问权限设置。6、外部输入的文件路径，需要realpath7、宏定位中，输入的每一个参数都需要使用">
+<meta name="twitter:title" content="关于软件质量总结与思考">
+<meta name="twitter:description" content="背景​        这段时间项目进入了迭代的尾期，主要开始处理软件质量的问题，从codestyle修改到静态检查的清理、再到安全代码检视，以及后面还有得cmetric等等。 本文是对这一阶段的工作过程中发现的codestyle、安全代码检视等各种问题做总结，另外也对项目中存在的问题做一点点思考。 常见codestyle问题​        codestyle主要是违反公司的编码规范的问题，本节是">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://www.jacsons.com/2019/07/15/总结/静态检查/">
+  <link rel="canonical" href="http://www.jacsons.com/2019/08/26/总结/思考/关于软件质量的思考/">
 
 
 
 
 
-  <title>常见静态检查问题 | jacsons</title>
+  <title>关于软件质量总结与思考 | jacsons</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jacsons.com/2019/07/15/总结/静态检查/">
+    <link itemprop="mainEntityOfPage" href="http://www.jacsons.com/2019/08/26/总结/思考/关于软件质量的思考/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jacsons">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">常见静态检查问题</h1>
+          <h1 class="post-title" itemprop="name headline">关于软件质量总结与思考</h1>
         
 
         <div class="post-meta">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-15T02:33:07+08:00">
-                2019-07-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-26T06:30:07+08:00">
+                2019-08-25
               </time>
             
 
@@ -387,8 +387,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/07/15/总结/静态检查/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/07/15/总结/静态检查/" itemprop="commentCount"></span>
+                <a href="/2019/08/26/总结/思考/关于软件质量的思考/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/08/26/总结/思考/关于软件质量的思考/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -416,8 +416,53 @@
       
 
       
-        <h4 id="常见静态检查问题"><a href="#常见静态检查问题" class="headerlink" title="常见静态检查问题"></a>常见静态检查问题</h4><p>本文介绍项目过程中常遇到的静态检查问题：</p>
-<p>1、指针未赋值<br>2、多余的赋值。<br>3、指针加上运算未对时出现截断现象（原因是int * int  必须为long ，故因为int * long）<br>4、指针不使用时，需要赋值为NULL<br>5、文件打开时如果使用create命令，需要制定create后文件的访问权限设置。<br>6、外部输入的文件路径，需要realpath<br>7、宏定位中，输入的每一个参数都需要使用括号括住。<br>8、文件使用完后，未对文件进行关闭操作。<br>9、外部输入的命令，需要做校验操作。<br>10、将指针转换为数值时不能使用（unsing int） 应该是用（uint_ptr)。 该类型是根据CPU位宽确定。<br>11、位运算操作时，只能对unsigned类型进行操作。</p>
+        <h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>​        这段时间项目进入了迭代的尾期，主要开始处理软件质量的问题，从codestyle修改到静态检查的清理、再到安全代码检视，以及后面还有得cmetric等等。 本文是对这一阶段的工作过程中发现的codestyle、安全代码检视等各种问题做总结，另外也对项目中存在的问题做一点点思考。</p>
+<h5 id="常见codestyle问题"><a href="#常见codestyle问题" class="headerlink" title="常见codestyle问题"></a>常见codestyle问题</h5><p>​        codestyle主要是违反公司的编码规范的问题，本节是对违反的公司编码规范的典型问题的总结。</p>
+<ul>
+<li>主要的问题有<br>1、四空格对齐问题<br>2、if等单条件语句未加大括号<br>3、宏定义的多行代码未加do{…}while(0)<br>4、宏定义的参数在使用过程中未添加括号。<br>5、魔鬼数字<br>6、函数超过50行<br>7、全局变量命名未添加g<br>8、变量使用不必要的初始化。</li>
+</ul>
+<h5 id="常见安全编码问题"><a href="#常见安全编码问题" class="headerlink" title="常见安全编码问题"></a>常见安全编码问题</h5><p>​       安全编码是根据公司的安全编码规范项对代码进行排查，本节是介绍常见违反公司安全编码规范的问题进行总结</p>
+<ul>
+<li><p>主要的问题有</p>
+<p>1、日志问题</p>
+<ul>
+<li><p>错误状态下未打印日志</p>
+</li>
+<li><p>打印日志中未打印返回值</p>
+</li>
+<li><p>多条件打印下，日志打印不完全。</p>
+</li>
+</ul>
+<p>2、数据类型使用混乱，如长度使用int(应该使用size_t). 特别注意进行位运算一定要使用无符号类型。</p>
+<p>3、资源申请未按照要求赋初值，资源释放未赋默认值。</p>
+<p>4、结构体类型申请未赋默认值， malloc申请内存后未使用memset_s清零.</p>
+<p>5、函数参数在函数体类未改变，未使用const类型。</p>
+<p>6、传入的参数为数组或字符串（const字符串除外），未传入长度。</p>
+<p>7、对于ioctl的结果，未进行校验直接使用。</p>
+<p>8、数据进行运算时，不考虑溢出问题。</p>
+<p>9、if语句条件判断不完全。</p>
+<p>10、返回值类型不统一。</p>
+</li>
+<li><p>安全考试中常见的问题<br>1、赋值给memset，malloc、等传递的为负数或者运算后溢出的数值。</p>
+<p>2、memset 可能导致命令注入。</p>
+<p>3、sccanf 返回值一定要判断个数。</p>
+<p>4、存储密码类型的变量，使用完后要清零。</p>
+</li>
+</ul>
+<h5 id="常见的代码问题"><a href="#常见的代码问题" class="headerlink" title="常见的代码问题"></a>常见的代码问题</h5><p>​    在检视过程中发现项目中存在几个问题：</p>
+<ul>
+<li><p>项目中常见问题</p>
+<p>1、代码中基本功能每个模块都写一份。</p>
+<p>2、同一个文件中重复代码特别严重，基本没有考虑共同点做简化。</p>
+<p>3、没有C++封装、低耦合高内聚思想，有些员工具有C++基本思想，但是代码写出来后将数据直接暴露出去，导致各种多线程问题频繁发出。</p>
+<p>4、重点模块新员工写，以上几点问题代码中层出不穷，解决问题疲于奔命，直接导致项目质量持续恶化。</p>
+</li>
+<li><p>以上问题的几点解决办法思考</p>
+<p>1、分析项目常用功能，编写公共组件模块，由有经验的一部分员工编写及维护。</p>
+<p>2、赋能设计模式，提升员工低耦合高内聚思想。</p>
+<p>3、区分项目中重点模块、复杂模块、普通模块、简单模块，由有经验的人员编写重点、复杂模块，至少完成这些模块的框架结构，新员工、新人完成普通模块与简单模块。重点、复杂模块有一老员工进行架构看护。</p>
+</li>
+</ul>
 
       
     </div>
@@ -440,7 +485,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/project/" rel="tag"><i class="fa fa-tag"></i> project</a>
+            <a href="/tags/thinking/" rel="tag"><i class="fa fa-tag"></i> thinking</a>
           
         </div>
       
@@ -453,8 +498,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/15/阅读/linux/makefile/" rel="next" title="makefile学习总结">
-                <i class="fa fa-chevron-left"></i> makefile学习总结
+              <a href="/2019/07/23/总结/生活/科目二考试失败总结/" rel="next" title="科目二考试失败总结">
+                <i class="fa fa-chevron-left"></i> 科目二考试失败总结
               </a>
             
           </div>
@@ -463,8 +508,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/21/阅读/linux/linux互斥量/" rel="prev" title="Linux系统中的互斥量">
-                Linux系统中的互斥量 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/29/计划/十年规划/" rel="prev" title="十年规划">
+                十年规划 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -495,7 +540,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2019/07/15/总结/静态检查/" data-title="常见静态检查问题" data-url="http://www.jacsons.com/2019/07/15/总结/静态检查/">
+      <div class="ds-thread" data-thread-key="2019/08/26/总结/思考/关于软件质量的思考/" data-title="关于软件质量总结与思考" data-url="http://www.jacsons.com/2019/08/26/总结/思考/关于软件质量的思考/">
       </div>
     
   </div>
@@ -543,7 +588,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -565,7 +610,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -624,7 +669,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#常见静态检查问题"><span class="nav-number">1.</span> <span class="nav-text">常见静态检查问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#常见codestyle问题"><span class="nav-number">1.1.</span> <span class="nav-text">常见codestyle问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常见安全编码问题"><span class="nav-number">1.2.</span> <span class="nav-text">常见安全编码问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常见的代码问题"><span class="nav-number">1.3.</span> <span class="nav-text">常见的代码问题</span></a></li></ol></li></ol></div>
             
 
           </div>

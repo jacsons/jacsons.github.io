@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="read,">
+  <meta name="keywords" content="thinking,">
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="简单工厂​        简单工厂是根据使用统一的接口，在保证主流程结构不变的情况下，根据传入的参数来改变获取不同的执行行数从而获取不同的结果。简单工厂体现的变（工具）与不变（主流程）分离的思想。在主流程不用动的情况下，便于工具的修改与扩充。 C语言实现 simpleFactor.h  1234567891011121314151617#ifndef __SIMPLE_FACTORY_H__#de">
-<meta name="keywords" content="read">
+<meta name="description" content="通用软件2年半开发经验感想 该文档是最工作两年半，在通用软件开发过程中设计的需求、开发、测试、上下游对接以及客户支撑过程中的一些注意事项以及感想。同时也对这两年半以来经历的两个PL，从他们学到的已经管理经验，做一些总结记录。  感想 这个写在最开头是因为觉得这些太重要了，相对于后面的闲言碎语，不如直接来写先写总结时刻提醒自己，在项目过程中需要注意些什么，这就是干事情的规则与条条框框。  只有用心去">
+<meta name="keywords" content="thinking">
 <meta property="og:type" content="article">
-<meta property="og:title" content="简单工厂">
-<meta property="og:url" content="http://www.jacsons.com/2019/09/21/阅读/Cdesign/simpleFactory/index.html">
+<meta property="og:title" content="通用软件两年半感想之领导篇">
+<meta property="og:url" content="http://www.jacsons.com/2018/09/16/总结/思考/通用软件两年半感想/index.html">
 <meta property="og:site_name" content="jacsons">
-<meta property="og:description" content="简单工厂​        简单工厂是根据使用统一的接口，在保证主流程结构不变的情况下，根据传入的参数来改变获取不同的执行行数从而获取不同的结果。简单工厂体现的变（工具）与不变（主流程）分离的思想。在主流程不用动的情况下，便于工具的修改与扩充。 C语言实现 simpleFactor.h  1234567891011121314151617#ifndef __SIMPLE_FACTORY_H__#de">
+<meta property="og:description" content="通用软件2年半开发经验感想 该文档是最工作两年半，在通用软件开发过程中设计的需求、开发、测试、上下游对接以及客户支撑过程中的一些注意事项以及感想。同时也对这两年半以来经历的两个PL，从他们学到的已经管理经验，做一些总结记录。  感想 这个写在最开头是因为觉得这些太重要了，相对于后面的闲言碎语，不如直接来写先写总结时刻提醒自己，在项目过程中需要注意些什么，这就是干事情的规则与条条框框。  只有用心去">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-06T14:31:33.735Z">
+<meta property="og:updated_time" content="2019-08-02T14:35:43.237Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="简单工厂">
-<meta name="twitter:description" content="简单工厂​        简单工厂是根据使用统一的接口，在保证主流程结构不变的情况下，根据传入的参数来改变获取不同的执行行数从而获取不同的结果。简单工厂体现的变（工具）与不变（主流程）分离的思想。在主流程不用动的情况下，便于工具的修改与扩充。 C语言实现 simpleFactor.h  1234567891011121314151617#ifndef __SIMPLE_FACTORY_H__#de">
+<meta name="twitter:title" content="通用软件两年半感想之领导篇">
+<meta name="twitter:description" content="通用软件2年半开发经验感想 该文档是最工作两年半，在通用软件开发过程中设计的需求、开发、测试、上下游对接以及客户支撑过程中的一些注意事项以及感想。同时也对这两年半以来经历的两个PL，从他们学到的已经管理经验，做一些总结记录。  感想 这个写在最开头是因为觉得这些太重要了，相对于后面的闲言碎语，不如直接来写先写总结时刻提醒自己，在项目过程中需要注意些什么，这就是干事情的规则与条条框框。  只有用心去">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://www.jacsons.com/2019/09/21/阅读/Cdesign/simpleFactory/">
+  <link rel="canonical" href="http://www.jacsons.com/2018/09/16/总结/思考/通用软件两年半感想/">
 
 
 
 
 
-  <title>简单工厂 | jacsons</title>
+  <title>通用软件两年半感想之领导篇 | jacsons</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jacsons.com/2019/09/21/阅读/Cdesign/simpleFactory/">
+    <link itemprop="mainEntityOfPage" href="http://www.jacsons.com/2018/09/16/总结/思考/通用软件两年半感想/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jacsons">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">简单工厂</h1>
+          <h1 class="post-title" itemprop="name headline">通用软件两年半感想之领导篇</h1>
         
 
         <div class="post-meta">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-21T06:16:10+08:00">
-                2019-09-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-16T18:22:07+08:00">
+                2018-09-16
               </time>
             
 
@@ -369,19 +369,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/design/" itemprop="url" rel="index">
-                    <span itemprop="name">design</span>
+                  <a href="/categories/conclusion/" itemprop="url" rel="index">
+                    <span itemprop="name">conclusion</span>
                   </a>
                 </span>
 
@@ -398,8 +387,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/09/21/阅读/Cdesign/simpleFactory/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/09/21/阅读/Cdesign/simpleFactory/" itemprop="commentCount"></span>
+                <a href="/2018/09/16/总结/思考/通用软件两年半感想/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/09/16/总结/思考/通用软件两年半感想/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -427,29 +416,76 @@
       
 
       
-        <h4 id="简单工厂"><a href="#简单工厂" class="headerlink" title="简单工厂"></a>简单工厂</h4><p>​        简单工厂是根据使用统一的接口，在保证主流程结构不变的情况下，根据传入的参数来改变获取不同的执行行数从而获取不同的结果。简单工厂体现的变（工具）与不变（主流程）分离的思想。在主流程不用动的情况下，便于工具的修改与扩充。</p>
-<h5 id="C语言实现"><a href="#C语言实现" class="headerlink" title="C语言实现"></a>C语言实现</h5><ul>
-<li>simpleFactor.h</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __SIMPLE_FACTORY_H__</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> __SIMPLE_FACTORY_H__</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">enum</span> type &#123;</span><br><span class="line">    CIRCLE = <span class="number">0</span>,</span><br><span class="line">    REGTANCLE,</span><br><span class="line">    OTHERS</span><br><span class="line">&#125; <span class="keyword">type_t</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">object</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> (*operators)(<span class="keyword">const</span> struct object *that);</span><br><span class="line">&#125; <span class="keyword">object_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">object_t</span> *Object_Factory(<span class="keyword">type_t</span> type);</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
+        <h3 id="通用软件2年半开发经验感想"><a href="#通用软件2年半开发经验感想" class="headerlink" title="通用软件2年半开发经验感想"></a>通用软件2年半开发经验感想</h3><blockquote>
+<p>该文档是最工作两年半，在通用软件开发过程中设计的需求、开发、测试、上下游对接以及客户支撑过程中的一些注意事项以及感想。同时也对这两年半以来经历的两个PL，从他们学到的已经管理经验，做一些总结记录。</p>
+</blockquote>
+<h4 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h4><blockquote>
+<p>这个写在最开头是因为觉得这些太重要了，相对于后面的闲言碎语，不如直接来写先写总结时刻提醒自己，在项目过程中需要注意些什么，这就是干事情的规则与条条框框。</p>
 <ul>
-<li>simpleFactor.c</li>
+<li>只有用心去做好一个项目，从用户的角度去做，才能够把项目做好，自身才能更快的成长。（做好一个项目很难，做好一个让客户满意的项目更能，能够往客户方面想必然需要考虑更多，也才能学到更多）</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"simpleFactory.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">default_operator</span><span class="params">(<span class="keyword">const</span> struct object *that)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"oh no, this type not support\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">circle_operator</span><span class="params">(<span class="keyword">const</span> struct object *that)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello, my name is circle\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">retangle_operator</span><span class="params">(<span class="keyword">const</span> struct object *that)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello, my name is retangle\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">object_t</span> *Object_Factory(<span class="keyword">type_t</span> type)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">object_t</span> g_object = &#123; <span class="number">0</span> &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">switch</span> (type) &#123;</span><br><span class="line">    <span class="keyword">case</span> CIRCLE :</span><br><span class="line">        g_object.operators = circle_operator;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> REGTANCLE :</span><br><span class="line">        g_object.operators = retangle_operator;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        g_object.operators = default_operator;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &amp;g_object;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+</blockquote>
 <ul>
-<li>main.c</li>
+<li><p>一个项目部仅仅只有编码，还有需求分析，设计文档，编码，测试，相关人员对接，项目的编译部署，上线策略，对外影响，功能价值等方方面面。 –两年半负责开发、CIE、运维、维护工作的感想。</p>
+</li>
+<li><p>一个项目带好需要经历一年或多年，一个项目带坏只需要一个迭代就可以让你糟糕透顶。（千里之堤溃于蚁穴），导致<em>人心松散</em>，项目人员流失。 所以项目负责人一定要有责任敢，非常熟悉项目，关键时刻能够解决问题。–4个月的编排项目。</p>
+</li>
+<li><p>项目负责人做好一个项目除需要关注需求与story完成情况之外，需要了解客户对每个功能的要求，最后要核查开发人员对每个功能的具体实现情况，存在偏差一定要核对，避免后期造成回该成本（回改成本会是相当巨大的）–对编排收编商业洞察项目，自身没有去核对每一个功能的思考，如果没有权利修改，写出功能的不同点，并将不同点以邮件的项目发送给相关人员给出处理结论。</p>
+</li>
+<li><p>开发过程与处理事务过程中，遇到低效问题以及处理过程感觉别扭或者很绕的问题，一定要去思考出更好的解决方法，成长就在该过程之中。</p>
+</li>
+<li><p>项目中遇到不合理的事情，一定要马上更改，越到后期，修改成本越高，导致做事情的节奏越乱。– 承担维护以来的感想。</p>
+</li>
+<li><p>涉及对外、需要交接、问题定位一定要写好文档！减少重复沟通成本 –编排项目文档与FQ的减少大量沟通成本的感想。                  </p>
+</li>
+<li><p>任何事情刚刚开始处理需要相关人员配置或者影响某些人员时发一封邮件（如果时间不确定写上时间待定），处理完成之后发一封邮件。（附上纪要或者需要相关人员配合的事情，如果要有处理完事情，通知具体处理完事情），这将减少上下游处理带来的许多不必要的沟通成本。–负责编排框架部署任务的感想。</p>
+</li>
+<li><p>对外的事情，如果已经出来完，及时发信息催促相关人员处理完。</p>
+</li>
+<li><p>要做为一个项目负责人，需要了解系统的整体结构。可以通过以下几个方面去:</p>
+<ul>
+<li>阅读其他模块的代码，有条件的话最好自己去实现阅读的模块代码的功能或者写下文档。</li>
+<li>可以改下其他模块代码的问题单，从而了解其他模块的功能。</li>
+<li>了解其他模块一定先了解整个系统的骨架结构，骨架不仅仅只是本团队，而是整个产品的骨架结构。</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"simpleFactory.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">object_t</span> *objectp = Object_Factory(CIRCLE);</span><br><span class="line">    objectp-&gt;operators(objectp);</span><br><span class="line"></span><br><span class="line">    objectp = Object_Factory(REGTANCLE);</span><br><span class="line">    objectp-&gt;operators(objectp);</span><br><span class="line"></span><br><span class="line">    objectp = Object_Factory(OTHERS);</span><br><span class="line">    objectp-&gt;operators(objectp);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h5><p>编译</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc main.c simpleFactory.c -o simpleFactory</span><br></pre></td></tr></table></figure>
-
-<p>运行结果</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hello, my name is circle</span><br><span class="line">hello, my name is retangle</span><br><span class="line">oh no, this type not support</span><br></pre></td></tr></table></figure>
-
-<h5 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h5><p>​        简单工厂模式其实就是工具集能够根据传入的参数获取不同的对象，从而实现主流程的多态。该模式幻化到架构层集其实最好的实现是将结构分为多个层级，每个层级的交互过程不应当让调用层考虑被调用方过多的细节。只需要传递不同的参数，来影响调用方的运行结果，即高内聚低耦合。</p>
+</li>
+<li><p>人是必然犯错误的，思考规范步骤，从制度或者用程序来解决人常犯错的问题。–从编排框架PL所学习到的。</p>
+<h4 id="两个PL的思考"><a href="#两个PL的思考" class="headerlink" title="两个PL的思考"></a>两个PL的思考</h4><blockquote>
+<p>本节从工作两年半以来，经历过的两个PL，从他们身上学到能够成功作为一个PL应当需要具有哪些优秀的品质以及对自身提出的要求。两个PL之间都具有遇事不乱，排列出优先级耐心处理的特点。</p>
+</blockquote>
+</li>
+<li><p>商业洞察PL：<br>在商业洞察最大的感受就是骨干问题，包括华为方与合作方。稳定结构带来的结果就是项目效果好，项目进展平稳。我觉得原因归结为以下原因合理评估工作量、尽最大努力去完成，完成不了不紧逼，确保团队稳定为最重要：</p>
+<ul>
+<li>参与项目之中去，了解项目的功能，后期需要跟踪项目的进度无法承担功能开发，主动承担项目的一些支撑性的工作（这其实也是更好的了解项目的版本状况）。</li>
+<li>项目工作安排以实际团队工作能够处理的事情出发，不贪大求全。</li>
+<li>时刻与团队成员拉近关系，且让团队人员加班有一个度–这个度需要去了解相关人员工资等其他方面的竞争力。</li>
+<li>对于一定时间内无法完成的项目，以用户交互为为主（规避方法），版本如果能够交付，则后面一个迭代估大工足量，分配一定的人员去解决规避的问题。如果不能够完成交付，能够及时知会相关人员，主动承担版本延期的责任。（尽最大努力去完成，完成不了不紧逼，团队稳定为最重要，敢于承担责任，而不去盲目的责怪团队成员）。</li>
+</ul>
+</li>
+<li><p>编排框架PL：<br>在编排框架中对PL的感受来源于，PL本身属于经常紧急处理出问题的项目的人，其特点具有条理性，能够快速梳理出项目的问题点，并且能够强制执行对应的规则，将问题项目快速扭正而走向正轨，其处理过程如下：</p>
+<ul>
+<li>参与项目之中，发现疑似问题点，首先找人核对并列出<em>事情的详细步骤</em>，思考这个步骤有很么问题，并且思考找出该步骤哪些问题，思考优化方案。（详细在仔细列出事情的各个步骤）</li>
+<li>找出处理方案，并强制性执行。（一个新方案比来带来抵触，因为刚刚开始有抵触，但后期比来带来效率的提升。）</li>
+<li>如果方案还有问题，及时修正再执行。（相信所有事情能够通过制度来规范，解决人常犯的错误。）</li>
+</ul>
+</li>
+<li><p>感想：如果自己做为PL或者项目负责人，首先需要去了解整体项目是干什么，然后可以从以下方面加强：</p>
+<ul>
+<li>记录梳理目前需要做的事情，并给相应的事情做优先级。</li>
+<li>根据项目情况，估计每一件事情的工作量（往大的方向估计），确认是否能够保证所有事情在deadline时间线前三天是否能够完成，如果不能够完成及时汇报风险。</li>
+<li>根据估计的工作量，设置任务内各小点有限级，阻塞问题先处理，设置目标达成点。每日check进度情况，在每个目标达成点时情况。不要亲信说，以实际情况为准。</li>
+<li>项目过程鼓励大家，保证大家是尽力在完成。并且识别项目进度风险，实在无法完成给出规避方案，并且记录在空闲时间及时补上正确方案。</li>
+<li>项目过程思索效率提升点，一点点提升团队效率。</li>
+<li>如果项目有延期风险，及时汇报，并且要有承担责任，并做总结，避免下次重蹈覆辙。</li>
+<li>所有事情都要先列出需要哪些步骤，列出list，这样才能保证过程不被遗漏，所有人处理事情不混乱。<h4 id="版本管理的思考"><a href="#版本管理的思考" class="headerlink" title="版本管理的思考"></a>版本管理的思考</h4><blockquote>
+<p>本部分的思考。项目负责人应当如何精简项目人员，更好的管理团队做些思考。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>一个独立的作战团队，其实不需要PL,PM,SE,SA这么多人员，PL人员可以弱化项目负责人。PM与PL合并，他们需要去了解项目的干了那些事。人员太多比来导致信息不对称成本，层级越高对项目的真实情况了解的越少，导致领导层无法了解项目的真实情况作出错误的决策。</p>
+</li>
+</ul>
 
       
     </div>
@@ -460,35 +496,6 @@
 	<div>
 		  
 			
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/09/21/阅读/Cdesign/simpleFactory/">简单工厂</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 jacsons 的个人博客">jacsons</a></p>
-  <p><span>发布时间:</span>2019年09月20日 - 22:09</p>
-  <p><span>最后更新:</span>2019年10月06日 - 22:10</p>
-  <p><span>原始链接:</span><a href="/2019/09/21/阅读/Cdesign/simpleFactory/" title="简单工厂">http://www.jacsons.com/2019/09/21/阅读/Cdesign/simpleFactory/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.jacsons.com/2019/09/21/阅读/Cdesign/simpleFactory/" aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-    $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({   
-          title: "",   
-          text: '复制成功',
-          icon: "success", 
-          showConfirmButton: true
-          });
-    });
-    });  
-</script>
-
 		  
 	</div>
     
@@ -501,7 +508,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/read/" rel="tag"><i class="fa fa-tag"></i> read</a>
+            <a href="/tags/thinking/" rel="tag"><i class="fa fa-tag"></i> thinking</a>
           
         </div>
       
@@ -514,8 +521,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/19/阅读/Cdesign/SingleInstance/" rel="next" title="单例模式">
-                <i class="fa fa-chevron-left"></i> 单例模式
+              <a href="/2018/09/09/总结/思考/通用软件两年半感想之项目篇/" rel="next" title="通用软件两年半感想之项目篇">
+                <i class="fa fa-chevron-left"></i> 通用软件两年半感想之项目篇
               </a>
             
           </div>
@@ -524,8 +531,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/07/阅读/Cdesign/AbstractorFactory/" rel="prev" title="抽象工厂">
-                抽象工厂 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/15/计划/2019年度计划/" rel="prev" title="2019年度计划">
+                2019年度计划 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -556,7 +563,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2019/09/21/阅读/Cdesign/simpleFactory/" data-title="简单工厂" data-url="http://www.jacsons.com/2019/09/21/阅读/Cdesign/simpleFactory/">
+      <div class="ds-thread" data-thread-key="2018/09/16/总结/思考/通用软件两年半感想/" data-title="通用软件两年半感想之领导篇" data-url="http://www.jacsons.com/2018/09/16/总结/思考/通用软件两年半感想/">
       </div>
     
   </div>
@@ -685,7 +692,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单工厂"><span class="nav-number">1.</span> <span class="nav-text">简单工厂</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#C语言实现"><span class="nav-number">1.1.</span> <span class="nav-text">C语言实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#运行结果"><span class="nav-number">1.2.</span> <span class="nav-text">运行结果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#小结"><span class="nav-number">1.3.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#通用软件2年半开发经验感想"><span class="nav-number">1.</span> <span class="nav-text">通用软件2年半开发经验感想</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#感想"><span class="nav-number">1.1.</span> <span class="nav-text">感想</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#两个PL的思考"><span class="nav-number">1.2.</span> <span class="nav-text">两个PL的思考</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#版本管理的思考"><span class="nav-number">1.3.</span> <span class="nav-text">版本管理的思考</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -27,7 +27,7 @@
     
     <div id="post-toc" class="animated hiddenToc hide">
       <span class="title">Toc</span>
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#常见静态检查问题"><span class="toc-text">常见静态检查问题</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#背景"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常见静态检查问题"><span class="toc-text">常见静态检查问题</span></a></li></ol>
     </div>
     
     <div id="fixed-menu-wrap">
@@ -171,8 +171,14 @@
       <div>
       </div>
     </div>
-    <h4 id="常见静态检查问题"><a href="#常见静态检查问题" class="headerlink" title="常见静态检查问题"></a>常见静态检查问题</h4><p>本文介绍项目过程中常遇到的静态检查问题：</p>
-<p>1、指针未赋值<br>2、多余的赋值。<br>3、指针加上运算未对时出现截断现象（原因是int * int  必须为long ，故因为int * long）<br>4、指针不使用时，需要赋值为NULL<br>5、文件打开时如果使用create命令，需要制定create后文件的访问权限设置。<br>6、外部输入的文件路径，需要realpath<br>7、宏定位中，输入的每一个参数都需要使用括号括住。<br>8、文件使用完后，未对文件进行关闭操作。<br>9、外部输入的命令，需要做校验操作。<br>10、将指针转换为数值时不能使用（unsing int） 应该是用（uint_ptr)。 该类型是根据CPU位宽确定。<br>11、位运算操作时，只能对unsigned类型进行操作。</p>
+    <h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>目前从事底层软件工作一年多以来，项目组的静态检查（pclint、codemars、fortiy、codestyle）属于我工作的一部分，也一直观察项目组在这一块的告警数据。现对齐进行统计与汇总，这些都很基础，但是常常容易犯错，也谨记以提醒自己。</p>
+<h4 id="常见静态检查问题"><a href="#常见静态检查问题" class="headerlink" title="常见静态检查问题"></a>常见静态检查问题</h4><p>本文介绍项目过程中常遇到的静态检查问题：</p>
+<ul>
+<li>fority &amp; coverity问题<br>1、指针未赋值<br>2、多余的赋值。<br>3、指针加上运算未对时出现截断现象（原因是int * int  必须为long ，故因为int * long）<br>4、指针不使用时，需要赋值为NULL<br>5、文件打开时如果使用create命令，需要制定create后文件的访问权限设置。<br>6、外部输入的文件路径，需要realpath<br>7、宏定位中，输入的每一个参数都需要使用括号括住。<br>8、文件使用完后，未对文件进行关闭操作。<br>9、外部输入的命令，需要做校验操作。<br>10、将指针转换为数值时不能使用（unsing int） 应该是用（uint_ptr)。 该类型是根据CPU位宽确定。<br>11、位运算操作时，只能对unsigned类型进行操作。<br>12、资源泄漏。（这类问题常常为误报，但是应当从安全角度去分析代码，是否需要这个函数申请，另外一个函数去释放，如果需要，要考虑是否存在安全风险）。</li>
+<li>pclint<br>1、宏名重复定义。<br>2、定义未使用的变量和函数<br>3、圈复杂度超过15</li>
+<li>codemars<br>1、函数参数为数组，未传递长度。</li>
+<li>codestyle<br>1、未按照4字节对齐<br>2、void *（除回调函数外，建议重新设计数据结构，以char *传递更合适）<br>3、全局变量未加g<br>4、函数之间使用extern变量<br>5、宏未使用完备括号<br>6、函数参数超过5个（这个是因为寄存器的原因，故有参数个数限制）<br>7、函数长度超过50行（算法函数除外）<br>8、魔鬼数字 （单独一个数字，避免过多的宏定义与不便于理解，建议使用注释注明）<br>9、使用typdef对基本变量进行重命名。</li>
+</ul>
 
 
   

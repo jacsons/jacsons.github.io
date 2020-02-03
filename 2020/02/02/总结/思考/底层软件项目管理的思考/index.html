@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content>
+    <meta name="description" content>
+    
+    <title>
+      底层软件项目管理的思考 - jacsons
+    </title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/style/style.css">
+  </head>
+  <body>
+    <canvas id="pagemap"></canvas>
+    
+    <div id="post-toc" class="animated hiddenToc hide">
+      <span class="title">Toc</span>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#背景"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#成员构成"><span class="toc-text">成员构成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#组织结构"><span class="toc-text">组织结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#项目活动"><span class="toc-text">项目活动</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#规划设计"><span class="toc-text">规划设计</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#开发流程"><span class="toc-text">开发流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#效率点"><span class="toc-text">效率点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优秀点"><span class="toc-text">优秀点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#commit机制"><span class="toc-text">commit机制</span></a></li></ol></li></ol>
+    </div>
+    
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search">
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/logo.jpeg">
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class>
+          Home
+        </a>
+        
+        <a href="/archives" class>
+          Archives
+        </a>
+        
+        <a href="/about" class>
+          About
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <div class="author">jacsons</div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author">jacsons</div>
+          <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        </div>
+
+        <div class="nav">
+          
+          <a href="/" class>
+            Home
+          </a>
+          
+          <a href="/archives" class>
+            Archives
+          </a>
+          
+          <a href="/about" class>
+            About
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="https://github.com/jacsons" target="_block">
+              <span class="iconfont icon-github"></span>
+            </a>
+             
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <article class="post-entry">
+    <div class="header">
+      
+      <div class="title">底层软件项目管理的思考</div>
+      <div class="meta">
+        <span class="item">
+          <span class="iconfont icon-time-circle"></span>
+          <span>2020/02/02</span>
+        </span>
+
+        
+
+         
+        <span class="item">
+          <span class="iconfont icon-folder"></span>
+          <span>
+              
+                
+                  <a href="/categories/conclusion">conclusion</a>
+                
+              
+          </span>
+        </span>
+        
+        
+         
+          <span class="item">
+            <span class="iconfont icon-tag1"></span>
+            <span>
+                
+                  
+                    <a href="/tags/conclusion">conclusion</a>
+                  
+                
+                  
+                    <a href="/tags/thingking">thingking</a>
+                  
+                
+            </span>
+          </span>
+         
+      </div>
+      <div>
+      </div>
+    </div>
+    <h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>因前段时间项目经理收集项目中存在的短板与建议项，就提了一条。但是，这些短板在工作之中就已经发现，但是一直只是在私下吐槽，一直没有像上反馈。主要考虑到底层与通过软件的区别以及这些政策条件不成熟。现把这些想法写下来，其实是以往通用软件工作经验与底层软件经验结合后的一些项目管理上的思考。</p>
+<h4 id="成员构成"><a href="#成员构成" class="headerlink" title="成员构成"></a>成员构成</h4><ul>
+<li><p>经验<br>作为研发，项目都是由人来完成，人力资源是最重要的资源。但是，并不是具备某些知识就可以，经验也很重要，特别是底层软件，常存在难于排查问题，此时经验往往能够节省成周成月的费用。</p>
+</li>
+<li><p>知识更新<br>另外随着软件的发展，底层软件仍然使用的是面向过程的C语言（就linux系统），但原来的那套知识构成的人员，已经慢慢的不适应当前的软件规模开发，急需对知识进行扩充与更新了。更新包括需要有面向对象的思想来编写C语言，同时需要有上层软件开发软件的工程化思维，才能应对当前快速大规模的软件开发模式了。</p>
+</li>
+<li><p>人员组成</p>
+<p>迭代模式需要开发、测试、项目组织、SE、项目经理需要迭代前的规划、迭代过程共同努力，而不是仅仅只有开发参与。当前项目正从瀑布开发模型向迭代模式进行转型，当前有点类似于三不像阶段，既不向瀑布模型又不像迭代模型，有迭代的外壳（按照月进行），任务却是有什么功能需要就开发什么，测试也是等开发编码完成后，测试上一轮的功能，有点测试与开发脱节的味道,SE参与全局性的规范，项目经理关注项目进度，没有注重关注到项目之间信息的即时性。</p>
+<h4 id="组织结构"><a href="#组织结构" class="headerlink" title="组织结构"></a>组织结构</h4><p>组织结构是项目的基本，决定着项目的成功与失败。好的软件与坏的软件其实从组织结构设计开始就已经确定了，然而组织与软件开发一样，不可能从刚刚开始就已成熟了，而是通过反复迭代走向成熟的。如同软件一样，前期一定要有清晰的目标，在软件周期过程中持续的更新变化以应对软件开发过程。个人认为一个成熟的软件开发团队组成如下。</p>
+</li>
+</ul>
+<p>作为一个组织结构应当含有以下成员</p>
+<ul>
+<li><p>开发负责人</p>
+<p>作为整个项目负责人与资源管理者，需要对资源进行合理的分配，把握项目的整体进度与方向，需要知道要做什么，什么不能做。同时需要了解项目组的问题点与低效率点，并且提供资源这些问题进行补齐，这将极高团队的效率。</p>
+</li>
+<li><p>人力资源负责人</p>
+<p>作为人力资源负责人，需要识别团队人力资源方面的短板，招聘或者制定培养计划提升团队的能力、能力储备、团队活跃工作。</p>
+</li>
+<li><p>项目经理</p>
+<p>一个开发团队可能会有多个项目组成，项目与项目之间如果存在关联关系时，就需要项目经理这一角色。项目经理的职责属于拉通团队与团队之间，项目组与开发负责人之间桥梁的工作。</p>
+</li>
+<li><p>系统架构师（SA）</p>
+<p>架构师主要是关注软件的架构，当软件规模的持续变大时，需要架构师设计出满足当前软件的架构模式，需要结合人力组成与软件性能要求，设计出满足当前人力资源情况的软件框架。同时需要对模块间的接口，公共组件、第三方软件、骨架进行管理与维护，并能够参与其中。</p>
+<p>P.S: 该职责人员其实是相当重要的，但是目前底软开发团队中缺少此角色，以及组织模式导致当前功能模块之间一个一个处于孤立状态，模块内功能重复编写，增大了程序的复杂度，也导致了极其难以维护。</p>
+</li>
+<li><p>系统工程师（SE）</p>
+<p>系统工程师的职责是对业务面的需求转换为功能方面需求进行分析设计。特别需要分析出业务之间的依赖关系，对于被依赖的功能一定要提前安排完成。</p>
+<p>P.S：一定要建立好需求记录表格。另外对依赖关系需要梳理好，被依赖提前规划。（正式因为这个原因，当前项目常常出现功能开发被另外一个功能所阻塞）</p>
+</li>
+<li><p>开发团队</p>
+<p>开发作为功能开发团队，也涵盖开发组长、MDE、开发人员。组长作为leader应当涵盖开发负责人、项目经理的角色：设别团队短板、跟踪项目内的进度难度与项目外事务的拉通工作。</p>
+<p>P.S： 需要了解整个项目的功能，并且识别项目中的短板，预留能力重构短板。这一块将会对整个团队工作舒适度会有极大的改善。</p>
+</li>
+<li><p>测试团队</p>
+<p>测试作为功能的保障团队，需要对交付出去的功能进行负责。当前的软件规模越来越大，需要测试人员需要编写自动化程序的能力，利用测试化框架持续保障系统功能。</p>
+</li>
+<li><p>质量团队（QA）</p>
+<p>质量人员主要关注项目组各模块的质量状况，可以从问题数、构建数失败数、线上问题数、静态告警等维度去统计各组质量情况。如果有条件可以组织检视各项目团队的代码，通过分析其中的安全问题、基本问题等角度来度量各模块的质量，为项目决策者识别项目中的短板及时补齐。同时也可以编写经典案例进行分享，提升团队质量意识。</p>
+<p>P.S：如果团队不大，没有必要存在专门的团队来负责这一块。可以通过指定负责人与部分开发人员组成临时的团队来处理此职责。</p>
+</li>
+<li><p>资料与秘书团队</p>
+<p>资料与秘书团队主要负责项目中的资料的整理（编写有开发完成），秘书主要负责项目组中的一些零碎性的事务。如果有条件，其实可以每个项目组就存在一个类似的人员。</p>
+<p>P.S：如果团队不大，没有必要存在专门的团队来负责这一块。可以通过指定负责人与部分开发人员组成临时的团队来处理此职责。</p>
+</li>
+</ul>
+<h4 id="项目活动"><a href="#项目活动" class="headerlink" title="项目活动"></a>项目活动</h4><h5 id="规划设计"><a href="#规划设计" class="headerlink" title="规划设计"></a>规划设计</h5><p>项目规划对整个项目进行非常重要，常常一个简单政策将会很大程度的影响到项目的工作量，甚至是人员的稳定性，这个往往不是一篇文章能够描述完成的。此处为工作者几年来观察，工作产出大，</p>
+<ul>
+<li>组织结构</li>
+<li>软件框架</li>
+<li>必要会议</li>
+</ul>
+<h5 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h5><p>当前的开发都已基于svn或者git来进行版本控制，建议使用git来做版本控制，具体可以通过网上获取git与svn相对的优点。</p>
+<ul>
+<li><p>前期准备</p>
+<ul>
+<li>拉迭代分支</li>
+<li>SE 前期分析出本迭代中存在的依赖的功能模块。</li>
+</ul>
+</li>
+<li><p>开发过程</p>
+<p>1、开发进行需求分析，输出分析文档（资料对此进行收集与汇总）</p>
+<p>2、编码</p>
+<p>此阶段主要完成编码工作，同时在开发过程。</p>
+<p>3、中期对齐</p>
+<p>4、测试 &amp; 问题单</p>
+<p>5、代码合如 &amp; 修复合入导致的问题</p>
+<ul>
+<li><p>中间过程</p>
+<p>中间过程在开发的2/3时，与测试对齐，测试启动测试程序开发，作为开发与测试共同功能验证点.</p>
+</li>
+</ul>
+</li>
+<li><p>奖惩措施</p>
+<p>对项目组内合入的需求的问题进行统计，根据问题难度与问题数进行权重汇总，得到一个得分进行排序。</p>
+<p>1、对于问题少的人，记录问题考核点。</p>
+<p>2、对于出错问题多的人，加强质量意识。如参与静态检查工作、测试工作等。</p>
+<p>3、挑出项目组中问题较多点或者代码优秀点，在项目组例会上进行分享，并且作为个人绩效参考点。</p>
+</li>
+</ul>
+<h5 id="效率点"><a href="#效率点" class="headerlink" title="效率点"></a>效率点</h5><h4 id="优秀点"><a href="#优秀点" class="headerlink" title="优秀点"></a>优秀点</h4><h5 id="commit机制"><a href="#commit机制" class="headerlink" title="commit机制"></a>commit机制</h5><p>项目组实行commiter机制，指定模块特别熟悉的人作为commiter，在代码何如时进行审核。从项目运行的经历看，能够很好的提升代码何如质量。</p>
+
+
+  
+  <div class="post-guide">
+    <div class="item left">
+        
+    </div>
+    <div class="item right">
+        
+          <a href="/2020/02/02/总结/工具/samba配置/">ubuntu创建共享目录给windows</a>
+        
+    </div>
+  </div>
+
+  
+
+  <div class="post-copyright">
+    <div class="auth">
+      本文作者：<a href="http://www.jacsons.com">jacsons</a>
+    </div>
+    <div class="link">
+      永久链接：<a href="http://www.jacsons.com/2020/02/02/总结/思考/底层软件项目管理的思考/">http://www.jacsons.com/2020/02/02/总结/思考/底层软件项目管理的思考/</a>
+    </div>
+    <div class="declare">
+      版权声明：本文首发于<a href="http://www.jacsons.com">jacsons</a>的博客，转载请注明出处！
+    </div>
+  </div>
+
+  <div id="comment"></div>
+
+  
+  
+</article>
+        <footer>
+          <div class="copyright">
+            ©2020
+            <a href="http://www.jacsons.com">jacsons</a> Powered by <a href="https://hexo.io">Hexo</a> |
+            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
+    </div>
+  </body>
+  
+</html>
+<script type="text/javascript">
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"service_worker\":{\"open\":false},\"baidu_tongji\":{\"site_from\":\"2019/7/26\",\"site_id\":\"\",\"access_token\":\"xxxxx\"}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","pagemap":"pagemap.min","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 

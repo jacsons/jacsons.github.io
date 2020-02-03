@@ -27,7 +27,7 @@
     
     <div id="post-toc" class="animated hiddenToc hide">
       <span class="title">Toc</span>
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#背景"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#成员构成"><span class="toc-text">成员构成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#组织结构"><span class="toc-text">组织结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#项目活动"><span class="toc-text">项目活动</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#规划设计"><span class="toc-text">规划设计</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#开发流程"><span class="toc-text">开发流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#效率点"><span class="toc-text">效率点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优秀点"><span class="toc-text">优秀点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#commit机制"><span class="toc-text">commit机制</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#背景"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#成员构成"><span class="toc-text">成员构成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#组织结构"><span class="toc-text">组织结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#项目活动"><span class="toc-text">项目活动</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#规划设计"><span class="toc-text">规划设计</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#开发流程"><span class="toc-text">开发流程</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优秀点"><span class="toc-text">优秀点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#commit机制"><span class="toc-text">commit机制</span></a></li></ol></li></ol>
     </div>
     
     <div id="fixed-menu-wrap">
@@ -223,9 +223,24 @@
 </ul>
 <h4 id="项目活动"><a href="#项目活动" class="headerlink" title="项目活动"></a>项目活动</h4><h5 id="规划设计"><a href="#规划设计" class="headerlink" title="规划设计"></a>规划设计</h5><p>项目规划对整个项目进行非常重要，常常一个简单政策将会很大程度的影响到项目的工作量，甚至是人员的稳定性，这个往往不是一篇文章能够描述完成的。此处为工作者几年来观察，工作产出大，</p>
 <ul>
-<li>组织结构</li>
-<li>软件框架</li>
-<li>必要会议</li>
+<li><p>组织结构</p>
+</li>
+<li><p>软件框架</p>
+<p>项目的软件是一个整体，各个模块之间不能够分割来编写，这样会因公共部分重复编写导致重复工作问题，另外也会每个人员技能不能，出现软件质量腐烂。故软件框架需要区分功能部分与基本模块部分，骨干部分与枝叶部分。</p>
+</li>
+<li><p>必要会议</p>
+<ul>
+<li><p>CCB 会议</p>
+<p>决策项目的资源分配、框架接口等各种项目的公共事务部分。</p>
+</li>
+<li><p>安全会议</p>
+<p>决策安全方面的问题：如接口，安全评审以及静态告警方面的屏蔽。</p>
+</li>
+<li><p>小组例会</p>
+<p>汇报小组项目进度，识别风险点与组内组间的述求。</p>
+</li>
+</ul>
+</li>
 </ul>
 <h5 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h5><p>当前的开发都已基于svn或者git来进行版本控制，建议使用git来做版本控制，具体可以通过网上获取git与svn相对的优点。</p>
 <ul>
@@ -255,7 +270,7 @@
 <p>3、挑出项目组中问题较多点或者代码优秀点，在项目组例会上进行分享，并且作为个人绩效参考点。</p>
 </li>
 </ul>
-<h5 id="效率点"><a href="#效率点" class="headerlink" title="效率点"></a>效率点</h5><h4 id="优秀点"><a href="#优秀点" class="headerlink" title="优秀点"></a>优秀点</h4><h5 id="commit机制"><a href="#commit机制" class="headerlink" title="commit机制"></a>commit机制</h5><p>项目组实行commiter机制，指定模块特别熟悉的人作为commiter，在代码何如时进行审核。从项目运行的经历看，能够很好的提升代码何如质量。</p>
+<h4 id="优秀点"><a href="#优秀点" class="headerlink" title="优秀点"></a>优秀点</h4><h5 id="commit机制"><a href="#commit机制" class="headerlink" title="commit机制"></a>commit机制</h5><p>项目组实行commiter机制，指定模块特别熟悉的人作为commiter，在代码何如时进行审核。从项目运行的经历看，能够很好的提升代码何如质量。</p>
 
 
   
